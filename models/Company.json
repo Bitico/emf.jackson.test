@@ -1,0 +1,90 @@
+{
+  "eClass" : "file:/Users/francesco/workspaces/RFI/jackson.test/models/Company.ecore#//CompanyModel",
+  "company" : [ {
+    "name" : "IBM",
+    "persons" : [ {
+      "firstname" : "Ludovico",
+      "lastname" : "Iovino",
+      "position" : "employee",
+      "assignedTo" : [ {
+        "eClass" : "file:/Users/francesco/workspaces/RFI/jackson.test/models/Company.ecore#//National",
+        "$ref" : "//@company.0/@projects.1"
+      } ],
+      "employed" : {
+        "eClass" : "file:/Users/francesco/workspaces/RFI/jackson.test/models/Company.ecore#//ServiceLine",
+        "$ref" : "//@company.0/@lines.1"
+      }
+    }, {
+      "firstname" : "Francesco",
+      "lastname" : "Basciani",
+      "position" : "employee",
+      "assignedTo" : [ {
+        "eClass" : "file:/Users/francesco/workspaces/RFI/jackson.test/models/Company.ecore#//European",
+        "$ref" : "//@company.0/@projects.0"
+      } ],
+      "employed" : {
+        "eClass" : "file:/Users/francesco/workspaces/RFI/jackson.test/models/Company.ecore#//ServiceLine",
+        "$ref" : "//@company.0/@lines.1"
+      }
+    }, {
+      "firstname" : "Davide",
+      "lastname" : "Di Ruscio",
+      "position" : "client"
+    } ],
+    "projects" : [ {
+      "eClass" : "file:/Users/francesco/workspaces/RFI/jackson.test/models/Company.ecore#//European",
+      "name" : "BIRDS",
+      "related" : {
+        "eClass" : "file:/Users/francesco/workspaces/RFI/jackson.test/models/Company.ecore#//Category",
+        "$ref" : "//@categories.0"
+      },
+      "budget" : 500000
+    }, {
+      "eClass" : "file:/Users/francesco/workspaces/RFI/jackson.test/models/Company.ecore#//National",
+      "name" : "AdvAq",
+      "related" : {
+        "eClass" : "file:/Users/francesco/workspaces/RFI/jackson.test/models/Company.ecore#//Category",
+        "$ref" : "//@categories.0"
+      },
+      "budget" : 10000
+    } ],
+    "address" : {
+      "eClass" : "file:/Users/francesco/workspaces/RFI/jackson.test/models/Company.ecore#//Address",
+      "$ref" : "//@address.0"
+    },
+    "lines" : [ {
+      "eClass" : "file:/Users/francesco/workspaces/RFI/jackson.test/models/Company.ecore#//Unit",
+      "name" : "SE"
+    }, {
+      "eClass" : "file:/Users/francesco/workspaces/RFI/jackson.test/models/Company.ecore#//ServiceLine",
+      "name" : "Development"
+    } ]
+  } ],
+  "categories" : [ {
+    "name" : "Techology Transfer",
+    "topics" : [ {
+      "eClass" : "file:/Users/francesco/workspaces/RFI/jackson.test/models/Company.ecore#//Topic",
+      "$ref" : "//@topics.0"
+    }, {
+      "eClass" : "file:/Users/francesco/workspaces/RFI/jackson.test/models/Company.ecore#//Topic",
+      "$ref" : "//@topics.1"
+    } ]
+  } ],
+  "topics" : [ {
+    "id" : "99",
+    "category" : {
+      "eClass" : "file:/Users/francesco/workspaces/RFI/jackson.test/models/Company.ecore#//Category",
+      "$ref" : "//@categories.0"
+    }
+  }, {
+    "id" : "10",
+    "category" : {
+      "eClass" : "file:/Users/francesco/workspaces/RFI/jackson.test/models/Company.ecore#//Category",
+      "$ref" : "//@categories.0"
+    }
+  } ],
+  "address" : [ {
+    "city" : "L'Aquila",
+    "completeAddress" : "V.le Crispi"
+  } ]
+}

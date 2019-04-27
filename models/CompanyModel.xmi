@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<company:CompanyModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:company="http://cs.gssi.it/company/1">
+  <company name="IBM"
+      address="//@address.0">
+    <persons
+        firstname="Ludovico"
+        lastname="Iovino"
+        position="employee"
+        assignedTo="//@company.0/@projects.1"
+        employed="//@company.0/@lines.1"/>
+    <persons
+        firstname="Francesco"
+        lastname="Basciani"
+        position="employee"
+        assignedTo="//@company.0/@projects.0"
+        employed="//@company.0/@lines.1"/>
+    <persons
+        firstname="Davide"
+        lastname="Di Ruscio"/>
+    <projects
+        xsi:type="company:European"
+        name="BIRDS"
+        related="//@categories.0"
+        budget="500000"/>
+    <projects
+        xsi:type="company:National"
+        name="AdvAq"
+        related="//@categories.0"
+        budget="10000"/>
+    <lines xsi:type="company:Unit"
+        name="SE"/>
+    <lines xsi:type="company:ServiceLine"
+        name="Development"/>
+  </company>
+  <categories
+      name="Techology Transfer"
+      topics="//@topics.0 //@topics.1"/>
+  <topics id="99"
+      category="//@categories.0"/>
+  <topics id="10"
+      category="//@categories.0"/>
+  <address city="L'Aquila"
+      completeAddress="V.le Crispi"/>
+</company:CompanyModel>
